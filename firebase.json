@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "ai-exam-presentation",
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
