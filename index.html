@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI 기반 문항 메타데이터 자동화 시스템 | 에듀테크 서비스 기획</title>
+  <meta name="description" content="AI 기반 교육과정 및 문항 속성 메타데이터 자동 매핑 시스템 서비스 기획 발표" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* 슬라이드 내부 스크롤용 보완 스타일 */
+    .slides-wrapper {
+      scrollbar-width: none;
+    }
+    .slides-wrapper::-webkit-scrollbar { display: none; }
+  </style>
+</head>
+<body>
+
+<!-- ── Navigation Dots ─────────────────────────────── -->
+<nav class="nav-dots" aria-label="슬라이드 네비게이션">
+  <button class="nav-dot active" aria-label="슬라이드 1: 커버"></button>
+  <button class="nav-dot" aria-label="슬라이드 2: 서비스 프로세스"></button>
+  <button class="nav-dot" aria-label="슬라이드 3: 기본 메타데이터"></button>
+  <button class="nav-dot" aria-label="슬라이드 4: AI 분석"></button>
+  <button class="nav-dot" aria-label="슬라이드 5: 핵심 기능"></button>
+  <button class="nav-dot" aria-label="슬라이드 6: 로드맵"></button>
+</nav>
+
+<!-- ── Main Slides Wrapper ────────────────────────── -->
+<main class="slides-wrapper">
+
+  <!-- ══════════════════════════════════════
+       SLIDE 0: COVER
+  ══════════════════════════════════════ -->
+  <section class="slide slide--dark cover-bg scroll-section" id="slide-0">
+    <div class="cover-glow"></div>
+    <div class="slide-inner" style="text-align:center; position:relative; z-index:1;">
+
+      <h1 class="cover-title anim-fade-up" style="font-size: clamp(3rem, 8vw, 6.5rem); margin-bottom: 28px;">
+        <span>AI기출문제</span><span style="-webkit-text-fill-color:#ffffff; background:none; color:#ffffff;">서비스</span>
+      </h1>
+
+      <p class="cover-sub anim-fade-up anim-delay-1" style="font-size: clamp(1.2rem, 2.5vw, 2rem); opacity: 0.75; font-weight: 300;">
+        프로세스 및 메타, 주요 서비스 소개
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SLIDE 1: SERVICE PROCESS
+  ══════════════════════════════════════ -->
+  <section class="slide slide--light scroll-section" id="slide-1">
+    <div class="slide-inner">
+      <div class="slide-num-badge" style="color:#1d1d1f;">01 — Service Process</div>
+
+      <div class="anim-fade-up">
+        <span class="slide-label label--light-blue">서비스 프로세스</span>
+      </div>
+      <h2 class="section-title anim-fade-up anim-delay-1">단계별 워크플로</h2>
+      <p class="section-desc anim-fade-up anim-delay-2">PDF 등록부터 커스텀 출력까지, 5단계로 완성되는 문항 아카이빙 파이프라인</p>
+
+      <div class="process-flow anim-fade-up anim-delay-3" style="display:grid; grid-template-columns: repeat(3,1fr); gap:20px;">
+
+        <div class="process-step">
+          <span class="process-num">Step 01</span>
+          <span class="process-icon">📄</span>
+          <div class="process-title">PDF 등록</div>
+          <div class="process-en">Registration</div>
+          <div class="process-desc">표준 파일명 규칙에 따른 시험지 업로드<br><em style="font-size:0.75rem; opacity:0.6;">Ex: 서울_2025년_중등2-1_중간_수학_신반포중</em></div>
+        </div>
+
+        <div class="process-step">
+          <span class="process-num">Step 02</span>
+          <span class="process-icon">🔍</span>
+          <div class="process-title">PDF 분석</div>
+          <div class="process-en">Digitalization</div>
+          <div class="process-desc">레이아웃 구조 분석 및 문항 단위 이미지 커팅, OCR 기반 텍스트 추출</div>
+        </div>
+
+        <div class="process-step">
+          <span class="process-num">Step 03</span>
+          <span class="process-icon">🤖</span>
+          <div class="process-title">오토 태깅</div>
+          <div class="process-en">AI Auto-Tagging</div>
+          <div class="process-desc">AI 기반 교육과정 및 문항 속성 메타데이터 자동 매핑</div>
+        </div>
+
+        <div class="process-step">
+          <span class="process-num">Step 04</span>
+          <span class="process-icon">🔎</span>
+          <div class="process-title">문항 검색</div>
+          <div class="process-en">Smart Search</div>
+          <div class="process-desc">자연어 및 다중 조건 필터를 활용한 문항 단위 정밀 검색</div>
+        </div>
+
+        <div class="process-step">
+          <span class="process-num">Step 05</span>
+          <span class="process-icon">📤</span>
+          <div class="process-title">커스텀 출력</div>
+          <div class="process-en">Custom Output</div>
+          <div class="process-desc">문항 정렬 및 노출 메타 설정 후 맞춤형 문서 저장/출력</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SLIDE 2: BASIC METADATA
+  ══════════════════════════════════════ -->
+  <section class="slide slide--dark scroll-section" id="slide-2">
+    <div class="slide-inner">
+      <div class="slide-num-badge" style="color:var(--dark-text);">02 — Metadata Basics</div>
+
+      <div class="anim-fade-up">
+        <span class="slide-label label--blue">주요 메타데이터: 기본 정보</span>
+      </div>
+      <h2 class="section-title anim-fade-up anim-delay-1">PDF 추출 및 규칙 기반 데이터</h2>
+      <p class="section-desc anim-fade-up anim-delay-2" style="color:var(--dark-text-secondary);">
+        표준화된 파일명과 OCR 분석을 통해 자동 추출되는 구조화된 정보
+      </p>
+
+      <div class="meta-grid">
+
+        <div class="meta-card anim-fade-up anim-delay-3">
+          <div class="meta-card-icon">🏛️</div>
+          <div class="meta-card-title">행정 / 학적 정보</div>
+          <div class="meta-tag-row">
+            <span class="meta-tag">지역</span>
+            <span class="meta-tag">학교명</span>
+            <span class="meta-tag">학교급</span>
+            <span class="meta-tag">학년</span>
+            <span class="meta-tag">학기</span>
+          </div>
+          <div class="meta-detail">
+            서울특별시, 광역시, 도 단위 분류<br>
+            서울은 <strong style="color:var(--apple-blue);">'구' 단위</strong> 상세화 적용<br>
+            초등·중등·고등 학교급 구분
+          </div>
+        </div>
+
+        <div class="meta-card anim-fade-up anim-delay-4">
+          <div class="meta-card-icon">📋</div>
+          <div class="meta-card-title">시험 / 출판 정보</div>
+          <div class="meta-tag-row">
+            <span class="meta-tag meta-tag--green">시행 연도</span>
+            <span class="meta-tag meta-tag--green">시험 유형</span>
+            <span class="meta-tag meta-tag--orange">과목명</span>
+            <span class="meta-tag meta-tag--orange">출판사</span>
+          </div>
+          <div class="meta-detail">
+            중간고사 / 기말고사 유형 분류<br>
+            과목별 <strong style="color:var(--apple-green);">교과서 출판사</strong> 정보 포함<br>
+            연도별 데이터 시계열 관리 가능
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SLIDE 3: AI ANALYSIS (통합)
+  ══════════════════════════════════════ -->
+  <section class="slide slide--light slide--scrollable scroll-section" id="slide-3"
+    style="padding-top: 100px; padding-bottom: 120px; align-items: flex-start;">
+    <div class="slide-inner">
+      <div class="slide-num-badge" style="color:#1d1d1f; top:40px;">03 — AI Analysis</div>
+
+      <div class="anim-fade-up">
+        <span class="slide-label label--light-blue">주요 메타데이터: AI 분석</span>
+      </div>
+      <h2 class="section-title anim-fade-up anim-delay-1">신뢰 근거 기반의 지능형 메타데이터 추출</h2>
+      <p class="section-desc anim-fade-up anim-delay-2">교육과정 기준에 따른 정밀한 AI 자동 분류 및 매핑</p>
+
+      <table class="ai-table anim-fade-up anim-delay-3">
+        <thead>
+          <tr>
+            <th>항목</th>
+            <th>상세 분석 및 예시</th>
+            <th>분석 근거</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>문제 유형</td>
+            <td>선택형, 단답형, 서술형 등 분류</td>
+            <td><span style="color:#aaa;">—</span></td>
+          </tr>
+          <tr>
+            <td>문제 배점</td>
+            <td>시험지 원본 내 배점 인식 및 추출</td>
+            <td><span class="ai-basis">시험지 원본 데이터</span></td>
+          </tr>
+          <tr>
+            <td>난이도</td>
+            <td>1~5단계 분류 (풀이 단계, 조건 복잡도 등 종합 판단)</td>
+            <td><span class="ai-basis">KICE 이원분류표,<br>교육부 성취평가 기준</span></td>
+          </tr>
+          <tr>
+            <td>내용 영역<br><span style="font-size:0.78rem; font-weight:400; opacity:0.7;">(내용체계 범주)</span></td>
+            <td>지식·이해 / 과정·기능 / 가치·태도 분류</td>
+            <td><span class="ai-basis">교육부 고시 제2022-33호,<br>2022 개정 교육과정<br>내용체계 3차원</span></td>
+          </tr>
+          <tr>
+            <td>행동 영역</td>
+            <td>
+              과목별 인지 수준 분류 <span class="ai-badge">L1 ~ L4</span><br>
+              <em style="font-size:0.82rem; color:#6e6e73;">Ex. 수학: 계산 → 이해 → 추론 → 문제 해결</em>
+            </td>
+            <td><span class="ai-basis">KICE 이원분류표<br>(한국교육과정평가원)</span></td>
+          </tr>
+          <tr>
+            <td>교과 역량</td>
+            <td>
+              과목별 핵심 역량 매핑<br>
+              <em style="font-size:0.82rem; color:#6e6e73;">Ex. 수학: 문제해결, 추론, 의사소통 등</em>
+            </td>
+            <td><span class="ai-basis">교육부 고시 각론,<br>2022 개정 교육과정<br>교과별 역량 정의</span></td>
+          </tr>
+          <tr>
+            <td>성취기준코드,<br>기준 내용영역</td>
+            <td>
+              최적 성취기준 코드 및 내용 영역 매핑<br>
+              <em style="font-size:0.82rem; color:#6e6e73;">Ex. [10통과01-01], 물질과 규칙성</em>
+            </td>
+            <td><span class="ai-basis">2022 개정 교육과정<br>성취기준</span></td>
+          </tr>
+          <tr>
+            <td>교과서 단원</td>
+            <td>
+              대 / 중 / 소 계층 단원 체계 매핑<br>
+              <em style="font-size:0.82rem; color:#6e6e73;">Ex: 생물의 구성과 다양성 &gt; 생물의 구성 &gt; 생물을 구성하는 단계</em>
+            </td>
+            <td><span style="color:#aaa;">—</span></td>
+          </tr>
+          <tr>
+            <td>주제 (하위 개념)</td>
+            <td>
+              세분화된 학습 개념 레벨 태깅<br>
+              <em style="font-size:0.82rem; color:#6e6e73;">Ex: 생물의 구성 단계</em>
+            </td>
+            <td><span style="color:#aaa;">—</span></td>
+          </tr>
+        </tbody>
+
+      </table>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SLIDE 4: KEY FEATURES
+  ══════════════════════════════════════ -->
+  <section class="slide slide--dark scroll-section" id="slide-4">
+    <div class="slide-inner">
+      <div class="slide-num-badge" style="color:var(--dark-text);">04 — Key Features</div>
+
+      <div class="anim-fade-up">
+        <span class="slide-label label--blue">핵심 기능 및 차별점</span>
+      </div>
+      <h2 class="section-title anim-fade-up anim-delay-1">왜 이 시스템인가?</h2>
+      <p class="section-desc anim-fade-up anim-delay-2" style="color:var(--dark-text-secondary);">
+        문항 단위 아카이빙, 지능형 검색, 맞춤 출력으로 기존 시스템을 압도
+      </p>
+
+      <div class="features-grid">
+
+        <div class="feature-card anim-fade-up anim-delay-3">
+          <span class="feature-keyword kw--blue">Unitization</span>
+          <div class="feature-icon">🗂️</div>
+          <div class="feature-title">문항 단위 아카이빙</div>
+          <div class="feature-desc">
+            시험지 단위가 아닌 <strong style="color:var(--apple-blue);">개별 문항 DB 구축</strong>으로
+            재구성 용이성 극대화. 필요한 문항만 골라 새로운 시험지 생성 가능.
+          </div>
+        </div>
+
+        <div class="feature-card anim-fade-up anim-delay-4">
+          <span class="feature-keyword kw--green">Intelligence</span>
+          <div class="feature-icon">🧠</div>
+          <div class="feature-title">지능형 조건 검색</div>
+          <div class="feature-desc">
+            고도화된 <strong style="color:var(--apple-green);">AI 메타데이터 필터</strong>를 통한 즉각적인 문항 탐색.
+            성취기준, 난이도, 유형을 복합 조건으로 검색.
+          </div>
+        </div>
+
+        <div class="feature-card anim-fade-up anim-delay-5">
+          <span class="feature-keyword kw--orange">Customization</span>
+          <div class="feature-icon">✏️</div>
+          <div class="feature-title">맞춤형 문서 생성</div>
+          <div class="feature-desc">
+            출력 시 문항 순서, <strong style="color:var(--apple-orange);">난이도 노출 여부</strong> 등
+            사용자 정의 옵션 지원. 교사별 맞춤 시험지 즉시 생성.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SLIDE 5: ROADMAP
+  ══════════════════════════════════════ -->
+  <section class="slide slide--light scroll-section" id="slide-5">
+    <div class="slide-inner">
+      <div class="slide-num-badge" style="color:#1d1d1f;">05 — Future Roadmap</div>
+
+      <div class="anim-fade-up">
+        <span class="slide-label label--light-blue">향후 로드맵</span>
+      </div>
+      <h2 class="section-title anim-fade-up anim-delay-1">지속적인 발전 계획</h2>
+      <p class="section-desc anim-fade-up anim-delay-2">
+        인프라 안정화부터 생성형 AI 확장까지, 단계적 고도화 로드맵
+      </p>
+
+      <div class="roadmap-timeline">
+
+        <div class="roadmap-item anim-fade-up anim-delay-3">
+          <div class="roadmap-marker">
+            <div class="roadmap-num rn--blue">1</div>
+          </div>
+          <div class="roadmap-content">
+            <div class="roadmap-title">인프라 고도화</div>
+            <div class="roadmap-desc">
+              비상(Visang) 사내 인프라 연동 및 안정화.
+              파이프라인 신뢰성 및 처리 속도 최적화.
+            </div>
+          </div>
+        </div>
+
+        <div class="roadmap-item anim-fade-up anim-delay-4">
+          <div class="roadmap-marker">
+            <div class="roadmap-num rn--green">2</div>
+          </div>
+          <div class="roadmap-content">
+            <div class="roadmap-title">정확도 개선</div>
+            <div class="roadmap-desc">
+              피드백 루프를 통한 AI 오토태깅 모델 고도화.
+              사용자 검수 데이터를 활용한 지속 학습(Continuous Learning) 구현.
+            </div>
+          </div>
+        </div>
+
+        <div class="roadmap-item anim-fade-up anim-delay-5">
+          <div class="roadmap-marker">
+            <div class="roadmap-num rn--orange">3</div>
+          </div>
+          <div class="roadmap-content">
+            <div class="roadmap-title">콘텐츠 확장</div>
+            <div class="roadmap-desc">
+              학력평가(학평), 모의평가(모평) 데이터 기획 및 검토.
+              전국 단위 시험 데이터로 커버리지 확대.
+            </div>
+          </div>
+        </div>
+
+        <div class="roadmap-item anim-fade-up anim-delay-6">
+          <div class="roadmap-marker">
+            <div class="roadmap-num rn--purple">4</div>
+          </div>
+          <div class="roadmap-content">
+            <div class="roadmap-title">기능 확장</div>
+            <div class="roadmap-desc">
+              생성형 AI(GenAI) 기반 유사 문항 자동 생성 기능 상세화.
+              문서 저장 및 공유 기능 고도화, 협업 플랫폼 연동 검토.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
